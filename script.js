@@ -5,7 +5,7 @@ async function loadRecipes() {
     return recipes;
 }
 
-// Function to get selected ingredients
+// Get selected ingredients
 function getSelectedIngredients() {
     const selectedIngredients = [];
     for (let i = 1; i <= 5; i++) {
@@ -16,17 +16,17 @@ function getSelectedIngredients() {
     return selectedIngredients;
 }
 
-// Function to filter recipes based on selected ingredients
+// Filter recipes based on selected ingredients
 async function filterRecipes() {
     const selectedIngredients = getSelectedIngredients();
-    const recipes = await loadRecipes();  // Fetch the recipes from JSON
+    const recipes = await loadRecipes();
     const filteredRecipes = recipes.filter(recipe => {
         return selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient));
     });
     displayRecipes(filteredRecipes);
 }
 
-// Function to display filtered recipes
+// Display filtered recipes
 function displayRecipes(filteredRecipes) {
     const recipeList = document.getElementById('recipe-list');
     recipeList.innerHTML = '';
@@ -39,14 +39,14 @@ function displayRecipes(filteredRecipes) {
             recipeDiv.classList.add('recipe');
             recipeDiv.innerHTML = `
                 <h4>${recipe.name}</h4>
-                <p>Ingredients: ${recipe.ingredients.join(', ')}</p>
+                <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
             `;
             recipeList.appendChild(recipeDiv);
         });
     }
 }
 
-// Add event listeners to checkboxes
+// Add event listeners for ingredient selection
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', filterRecipes);
 });
