@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Tomato Basil Soup",
+        "ingredients": ["Tomato", "Garlic", "Onion", "Basil"]
+    },
+    {
+        "name": "Chicken Garlic Stir-Fry",
+        "ingredients": ["Chicken", "Garlic", "Onion"]
+    },
+    {
+        "name": "Chicken Basil Pasta",
+        "ingredients": ["Chicken", "Basil", "Garlic", "Tomato"]
+    },
+    {
+        "name": "Veggie Stir Fry",
+        "ingredients": ["Onion", "Garlic", "Basil"]
+    },
+    {
+        "name": "Chicken Soup",
+        "ingredients": ["Chicken", "Onion", "Garlic"]
+    },
+    {
+        "name": "Garlic Tomato Chicken",
+        "ingredients": ["Tomato", "Chicken", "Garlic"]
+    },
+    {
+        "name": "Tomato Basil Salad",
+        "ingredients": ["Tomato", "Basil"]
+    },
+    {
+        "name": "Onion Basil Stew",
+        "ingredients": ["Onion", "Basil"]
+    }
+]

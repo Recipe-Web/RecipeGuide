@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    /* Reset default styling for margin, padding, and box-sizing */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Set a background and font styling for the body */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    /* Styling for the main container */
+    .container {
+        text-align: center;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+
+    /* Header styles */
+    h1 {
+        font-size: 2rem;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+        color: #4CAF50;
+    }
+
+    .ingredient-selector {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    label {
+        display: block;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    #recipe-list {
+        margin-top: 20px;
+    }
+
+    .recipe {
+        background-color: #e9ffe6;
+        padding: 15px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .recipe h4 {
+        color: #4CAF50;
+    }
+
+    .recipe p {
+        color: #555;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Recipe Guide</h1>
+        <h3>Select Ingredients</h3>
+        <div class="ingredient-selector">
+            <label>
+                <input type="checkbox" id="ingredient1"> Tomato
+            </label>
+            <label>
+                <input type="checkbox" id="ingredient2"> Garlic
+            </label>
+            <label>
+                <input type="checkbox" id="ingredient3"> Onion
+            </label>
+            <label>
+                <input type="checkbox" id="ingredient4"> Basil
+            </label>
+            <label>
+                <input type="checkbox" id="ingredient5"> Chicken
+            </label>
+        </div>
+
+        <h3>Recipes with Selected Ingredients</h3>
+        <div id="recipe-list">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
