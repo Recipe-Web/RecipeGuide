@@ -18,6 +18,7 @@
         padding: 0;
         box-sizing: border-box;
         border: 1px solid red;
+        
     }
 
     body {
@@ -39,9 +40,12 @@
     .navbar {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 0 20px;
+        align-content: center;
         font-family: "Montserrat", sans-serif;
+    }
+
+    .navbar nav {
+        align-content: center;
     }
 
     .navbar a {
@@ -110,14 +114,11 @@
     .ingredient-section {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
-        margin-left: 90px;
-        margin-right: 50px auto;
-        gap: 60rem;
+        gap: 970px;
     }
 
     .ingredient-section h2 {
-        padding-top: 15px;
+        align-content: center;
         font-size: 30px;
     }
 
@@ -125,10 +126,7 @@
     form.d-flex {
         display: flex;
         align-items: center;
-        justify-content: center;
-        width: 100%;
-        max-width: 500px;
-        margin: 20px auto;
+        padding: 15px;
     }
 
     form.d-flex .form-control {
@@ -142,7 +140,7 @@
     }
 
     form.d-flex .btn {
-        background-color: #007bff;
+        background-color: #0056b3;
         color: white;
         padding: 10px 20px;
         border: none;
@@ -153,7 +151,7 @@
     }
 
     form.d-flex .btn:hover {
-        background-color: #0056b3;
+        background-color: #E0A840;
     }
 
     @media (max-width: 600px) {
