@@ -19,7 +19,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        
+        border: 1px solid red;
     }
 
     body {
@@ -177,10 +177,11 @@
         justify-content: center;
         gap: 30px;
         flex-wrap: wrap;
+        padding: 50px;
     }
 
     .card {
-        width: 15rem;
+        width: 16rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -188,11 +189,24 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         background-color: #fff;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        width: 16rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+        transform: scale(1.10);
     }
 
     .card img {
         object-fit: cover;
-        height: 200px;
+        height: 120px;
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -208,8 +222,9 @@
     }
 
     .card label {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
+    
 </style>
 
 <body>
@@ -301,42 +316,42 @@
             </div>
             <div class="card">
                 <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
+                    class="card-img-top" alt="Chicken">
                 <div class="card-body">
-                    <h5 class="card-title">Soy Sauce</h5>
-                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                    <h5 class="card-title">Chicken</h5>
+                    <label><input type="checkbox" id="ingredient6"> Chicken</label>
                 </div>
             </div>
             <div class="card">
                 <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
+                    class="card-img-top" alt="Pork">
                 <div class="card-body">
-                    <h5 class="card-title">Soy Sauce</h5>
-                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                    <h5 class="card-title">Pork</h5>
+                    <label><input type="checkbox" id="ingredient7"> Pork</label>
                 </div>
             </div>
             <div class="card">
                 <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
+                    class="card-img-top" alt="Bell Pepper">
                 <div class="card-body">
-                    <h5 class="card-title">Soy Sauce</h5>
-                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                    <h5 class="card-title">Bell Pepper</h5>
+                    <label><input type="checkbox" id="ingredient8"> Bell Pepper</label>
                 </div>
             </div>
             <div class="card">
                 <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
+                    class="card-img-top" alt="Chili Peppers">
                 <div class="card-body">
-                    <h5 class="card-title">Soy Sauce</h5>
-                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                    <h5 class="card-title">Chili Peppers</h5>
+                    <label><input type="checkbox" id="ingredient9"> Chili Peppers</label>
                 </div>
             </div>
             <div class="card">
                 <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
+                    class="card-img-top" alt="Coconut Milk">
                 <div class="card-body">
-                    <h5 class="card-title">Soy Sauce</h5>
-                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                    <h5 class="card-title">Coconut Milk</h5>
+                    <label><input type="checkbox" id="ingredient10"> Coconut Milk</label>
                 </div>
             </div>
         </section>

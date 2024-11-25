@@ -8,7 +8,7 @@ async function loadRecipes() {
 // Get selected ingredients
 function getSelectedIngredients() {
     const selectedIngredients = [];
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 10; i++) {
         if (document.getElementById(`ingredient${i}`).checked) {
             selectedIngredients.push(document.getElementById(`ingredient${i}`).nextSibling.textContent.trim());
         }
