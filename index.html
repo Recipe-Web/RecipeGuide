@@ -19,7 +19,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        border: 1px solid red;
+        
     }
 
     body {
@@ -172,7 +172,7 @@
     }
 
     /* Cards Styling */
-    .cards {
+    .cards-checkboxes {
         display: flex;
         justify-content: center;
         gap: 30px;
@@ -258,13 +258,13 @@
         </div>
 
         <!--selecting ingredients -->
-        <section class="cards">
+        <section class="cards-checkboxes">
             <div class="card">
                 <img src="https://www.bradleysmoker.com/cdn/shop/articles/Smoked-Marinated-Eggplant-Recipe-scaled.jpg?v=1675739133&width=1500"
                     class="card-img-top" alt="Eggplant">
                 <div class="card-body">
                     <h5 class="card-title">Eggplant</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                    <label><input type="checkbox" id="ingredient1"> Eggplant</label>
                 </div>
             </div>
             <div class="card">
@@ -272,7 +272,7 @@
                     class="card-img-top" alt="Onion">
                 <div class="card-body">
                     <h5 class="card-title">Onion</h5>
-                    <label><input type="checkbox" id="ingredient2"> Add</label>
+                    <label><input type="checkbox" id="ingredient2"> Onion</label>
                 </div>
             </div>
             <div class="card">
@@ -280,7 +280,7 @@
                     class="card-img-top" alt="Tomato">
                 <div class="card-body">
                     <h5 class="card-title">Tomato</h5>
-                    <label><input type="checkbox" id="ingredient3"> Add</label>
+                    <label><input type="checkbox" id="ingredient3"> Tomato</label>
                 </div>
             </div>
             <div class="card">
@@ -288,7 +288,47 @@
                     class="card-img-top" alt="Garlic">
                 <div class="card-body">
                     <h5 class="card-title">Garlic</h5>
-                    <label><input type="checkbox" id="ingredient4"> Add</label>
+                    <label><input type="checkbox" id="ingredient4"> Garlic</label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
+                <div class="card-body">
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Soy Sauce</label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
+                <div class="card-body">
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
+                <div class="card-body">
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
+                <div class="card-body">
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Add</label>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
+                <div class="card-body">
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Add</label>
                 </div>
             </div>
             <div class="card">
@@ -300,6 +340,12 @@
                 </div>
             </div>
         </section>
+
+        <section class="recipe-results">
+            <h2>Recipes with Selected Ingredients</h2>
+            <div id="recipe-list"></div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
