@@ -1,34 +1,77 @@
 [
     {
-        "name": "Tomato Basil Soup",
-        "ingredients": ["Tomato", "Garlic", "Onion", "Basil"]
+        "name": "Adobo na Manok (Chicken Adobo)",
+        "ingredients": ["Chicken", "Garlic", "Onion", "Soy Sauce", "Vinegar", "Bay Leaves", "Peppercorns", "Water"],
+        "procedure": "1. Marinate chicken in soy sauce, vinegar, garlic, onion, bay leaves, and peppercorns for at least 30 minutes. 2. In a pan, cook the marinated chicken until browned. 3. Add water and simmer for 30 minutes until the sauce thickens."
     },
     {
-        "name": "Chicken Garlic Stir-Fry",
-        "ingredients": ["Chicken", "Garlic", "Onion"]
+        "name": "Sinigang na Baboy (Pork Sinigang)",
+        "ingredients": ["Tomato", "Onion", "Garlic", "Tamarind", "Pork", "Radish", "Eggplant", "Okra", "Water Spinach (Kang Kong)"],
+        "procedure": "1. Boil pork in water with onions and garlic until tender. 2. Add tomatoes and tamarind and continue to simmer. 3. Add the vegetables and cook until tender. Season with fish sauce or salt to taste."
     },
     {
-        "name": "Chicken Basil Pasta",
-        "ingredients": ["Chicken", "Basil", "Garlic", "Tomato"]
+        "name": "Chicken Inasal",
+        "ingredients": ["Chicken", "Garlic", "Onion", "Soy Sauce", "Calamansi", "Salt", "Pepper"],
+        "procedure": "1. Marinate chicken in soy sauce, garlic, onion, calamansi, salt, and pepper. 2. Grill the chicken over charcoal until cooked through. 3. Baste with the marinade while grilling."
     },
     {
-        "name": "Veggie Stir Fry",
-        "ingredients": ["Onion", "Garlic", "Basil"]
+        "name": "Lechon Kawali (Crispy Fried Pork Belly)",
+        "ingredients": ["Pork", "Garlic", "Onion", "Bay Leaves", "Salt", "Pepper", "Water", "Oil"],
+        "procedure": "1. Boil pork belly with garlic, onion, bay leaves, salt, and pepper until tender. 2. Let it cool, then deep fry until crispy. 3. Serve with lechon sauce or vinegar."
     },
     {
-        "name": "Chicken Soup",
-        "ingredients": ["Chicken", "Onion", "Garlic"]
+        "name": "Pancit Canton",
+        "ingredients": ["Chicken", "Garlic", "Onion", "Carrots", "Bell Pepper", "Cabbage", "Soy Sauce", "Pancit Canton Noodles"],
+        "procedure": "1. Sauté garlic and onions. Add chicken and cook until browned. 2. Add soy sauce and vegetables. 3. Stir-fry and add the pancit canton noodles, cooking until noodles are tender."
     },
     {
-        "name": "Garlic Tomato Chicken",
-        "ingredients": ["Tomato", "Chicken", "Garlic"]
+        "name": "Kare-Kare",
+        "ingredients": ["Pork", "Oxtail", "Garlic", "Onion", "Peanut Butter", "Eggplant", "String Beans", "Banana Blossom", "Basil"],
+        "procedure": "1. Boil oxtail and pork until tender. 2. Make a peanut sauce by mixing peanut butter, garlic, and onion. 3. Add the sauce to the boiled meat. 4. Add the vegetables and cook until tender. Serve with bagoong (fermented shrimp paste)."
     },
     {
-        "name": "Tomato Basil Salad",
-        "ingredients": ["Tomato", "Basil"]
+        "name": "Bicol Express",
+        "ingredients": ["Pork", "Garlic", "Onion", "Chili Peppers", "Coconut Milk", "Shrimp Paste"],
+        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add shrimp paste, then pour in coconut milk. 3. Simmer until pork is tender and sauce thickens. Add chili peppers for spice."
     },
     {
-        "name": "Onion Basil Stew",
-        "ingredients": ["Onion", "Basil"]
+        "name": "Puto (Steamed Rice Cake)",
+        "ingredients": ["Rice Flour", "Sugar", "Coconut Milk", "Baking Powder", "Eggs", "Butter"],
+        "procedure": "1. Mix rice flour, sugar, and baking powder. 2. Add coconut milk, eggs, and melted butter. 3. Pour into molds and steam for 20 minutes."
+    },
+    {
+        "name": "Lumpiang Shanghai (Spring Rolls)",
+        "ingredients": ["Pork", "Garlic", "Onion", "Carrots", "Spring Roll Wrappers", "Egg"],
+        "procedure": "1. Mix ground pork with garlic, onion, and grated carrots. 2. Wrap the mixture in spring roll wrappers. 3. Fry until golden brown and serve with sweet and sour sauce."
+    },
+    {
+        "name": "Chicken Afritada",
+        "ingredients": ["Chicken", "Garlic", "Onion", "Tomato", "Carrots", "Bell Pepper", "Potatoes", "Tomato Sauce"],
+        "procedure": "1. Sauté garlic and onions, add chicken and cook until browned. 2. Add tomato, carrots, bell pepper, and potatoes. 3. Pour in tomato sauce and cook until the sauce thickens."
+    },
+    {
+        "name": "Pinakbet",
+        "ingredients": ["Pork", "Garlic", "Onion", "Tomato", "Eggplant", "Bitter Melon", "String Beans", "Shrimp Paste"],
+        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add tomatoes and cook until soft. 3. Add the vegetables and shrimp paste, then simmer until vegetables are tender."
+    },
+    {
+        "name": "Laing",
+        "ingredients": ["Pork", "Garlic", "Chili Peppers", "Coconut Milk", "Taro Leaves"],
+        "procedure": "1. Sauté pork and garlic, add shrimp paste, then pour in coconut milk. 2. Add the dried taro leaves and simmer until thickened."
+    },
+    {
+        "name": "Pancit Malabon",
+        "ingredients": ["Pancit Malabon Noodles", "Shrimp", "Garlic", "Onion", "Fish Sauce", "Chicharrón"],
+        "procedure": "1. Sauté garlic and onions, add shrimp and cook. 2. Add pancit malabon noodles and fish sauce. 3. Top with hard-boiled eggs and chicharrón."
+    },
+    {
+        "name": "Tuna Sisig",
+        "ingredients": ["Tuna", "Onion", "Garlic", "Chili Peppers", "Lemon", "Soy Sauce"],
+        "procedure": "1. Sauté garlic and onions, add tuna and cook until browned. 2. Add chili peppers, soy sauce, and lemon juice. 3. Serve sizzling on a hot plate."
+    },
+    {
+        "name": "Caldereta",
+        "ingredients": ["Beef", "Garlic", "Onion", "Tomato", "Potatoes", "Carrots", "Bell Pepper", "Tomato Sauce"],
+        "procedure": "1. Sauté garlic and onions, add beef and cook until browned. 2. Add tomato and vegetables, then pour in tomato sauce. 3. Simmer until beef is tender."
     }
 ]

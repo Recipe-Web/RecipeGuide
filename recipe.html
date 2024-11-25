@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="recipe.css">
-    <title>Document</title>
+    <title>Filipino Recipes</title>
 </head>
-
 <body>
     <div class="container">
         <section class="ingredient-selection">
@@ -16,9 +14,14 @@
                 <label><input type="checkbox" id="ingredient1"> Tomato</label>
                 <label><input type="checkbox" id="ingredient2"> Garlic</label>
                 <label><input type="checkbox" id="ingredient3"> Onion</label>
-                <label><input type="checkbox" id="ingredient4"> Basil</label>
+                <label><input type="checkbox" id="ingredient4"> Soy Sauce</label>
                 <label><input type="checkbox" id="ingredient5"> Chicken</label>
-                <!-- Add more ingredients as necessary -->
+                <label><input type="checkbox" id="ingredient6"> Pork</label>
+                <label><input type="checkbox" id="ingredient7"> Eggplant</label>
+                <label><input type="checkbox" id="ingredient8"> Bell Pepper</label>
+                <label><input type="checkbox" id="ingredient9"> Chili Peppers</label>
+                <label><input type="checkbox" id="ingredient10"> Coconut Milk</label>
+                <!-- You can add more ingredients if needed -->
             </div>
         </section>
 
@@ -28,6 +31,60 @@
         </section>
     </div>
 
-</body>
+    <script>
+        // Fetch the recipes from the JSON file
+        async function loadRecipes() {
+            const response = await fetch('recipes.json');
+            const recipes = await response.json();
+            return recipes;
+        }
 
+        // Get selected ingredients
+        function getSelectedIngredients() {
+            const selectedIngredients = [];
+            for (let i = 1; i <= 10; i++) {
+                if (document.getElementById(`ingredient${i}`).checked) {
+                    selectedIngredients.push(document.getElementById(`ingredient${i}`).nextSibling.textContent.trim());
+                }
+            }
+            return selectedIngredients;
+        }
+
+        // Filter recipes based on selected ingredients
+        async function filterRecipes() {
+            const selectedIngredients = getSelectedIngredients();
+            const recipes = await loadRecipes();
+            const filteredRecipes = recipes.filter(recipe => {
+                return selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient));
+            });
+            displayRecipes(filteredRecipes);
+        }
+
+        // Display filtered recipes
+        function displayRecipes(filteredRecipes) {
+            const recipeList = document.getElementById('recipe-list');
+            recipeList.innerHTML = '';
+
+            if (filteredRecipes.length === 0) {
+                recipeList.innerHTML = '<p>No recipes found with the selected ingredients.</p>';
+            } else {
+                filteredRecipes.forEach(recipe => {
+                    const recipeDiv = document.createElement('div');
+                    recipeDiv.classList.add('recipe');
+                    recipeDiv.innerHTML = `
+                        <h4>${recipe.name}</h4>
+                        <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
+                        <p><strong>Procedure:</strong> ${recipe.procedure}</p>
+                    `;
+                    recipeList.appendChild(recipeDiv);
+                });
+            }
+        }
+
+        // Add event listeners for ingredient selection
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', filterRecipes);
+        });
+    </script>
+</body>
 </html>

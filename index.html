@@ -20,7 +20,6 @@
         padding: 0;
         box-sizing: border-box;
         border: 1px solid red;
-
     }
 
     body {
@@ -36,7 +35,6 @@
         color: white;
         padding: 20px 200px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
     }
 
     .navbar {
@@ -75,8 +73,7 @@
         margin-left: 120px;
     }
 
-    /*home*/
-
+    /* Home Section */
     .home {
         display: flex;
         margin: auto;
@@ -174,17 +171,44 @@
         }
     }
 
+    /* Cards Styling */
     .cards {
         display: flex;
         justify-content: center;
         gap: 30px;
+        flex-wrap: wrap;
     }
 
     .card {
+        width: 15rem;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
         text-align: center;
-        
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .card img {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .card label {
+        font-size: 1rem;
     }
 </style>
 
@@ -235,47 +259,46 @@
 
         <!--selecting ingredients -->
         <section class="cards">
-            <div class="card" style="width: 15rem;">
+            <div class="card">
+                <img src="https://www.bradleysmoker.com/cdn/shop/articles/Smoked-Marinated-Eggplant-Recipe-scaled.jpg?v=1675739133&width=1500"
+                    class="card-img-top" alt="Eggplant">
+                <div class="card-body">
+                    <h5 class="card-title">Eggplant</h5>
+                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                </div>
+            </div>
+            <div class="card">
                 <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="onion">
+                    class="card-img-top" alt="Onion">
                 <div class="card-body">
                     <h5 class="card-title">Onion</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                    <label><input type="checkbox" id="ingredient2"> Add</label>
                 </div>
             </div>
-            <div class="card" style="width: 15rem;">
-                <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="onion">
+            <div class="card">
+                <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN313-Tomatoes-732x549-Thumb.jpg"
+                    class="card-img-top" alt="Tomato">
                 <div class="card-body">
                     <h5 class="card-title">Tomato</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                    <label><input type="checkbox" id="ingredient3"> Add</label>
                 </div>
             </div>
-            <div class="card" style="width: 15rem;">
-                <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="onion">
+            <div class="card">
+                <img src="https://post.healthline.com/wp-content/uploads/2018/06/garlic-1296x728-header.jpg"
+                    class="card-img-top" alt="Garlic">
                 <div class="card-body">
-                    <h5 class="card-title">Tomato</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                    <h5 class="card-title">Garlic</h5>
+                    <label><input type="checkbox" id="ingredient4"> Add</label>
                 </div>
             </div>
-            <div class="card" style="width: 15rem;">
-                <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="onion">
+            <div class="card">
+                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                    class="card-img-top" alt="Soy Sauce">
                 <div class="card-body">
-                    <h5 class="card-title">Tomato</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
+                    <h5 class="card-title">Soy Sauce</h5>
+                    <label><input type="checkbox" id="ingredient5"> Add</label>
                 </div>
             </div>
-            <div class="card" style="width: 15rem;">
-                <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="onion">
-                <div class="card-body">
-                    <h5 class="card-title">Tomato</h5>
-                    <label><input type="checkbox" id="ingredient1"> Add</label>
-                </div>
-            </div>
-            
         </section>
     </main>
 
