@@ -1,4 +1,4 @@
-// Fetch the recipes from the JSON file
+// Fetch the recipes from the JSON file 
 async function loadRecipes() {
     const response = await fetch('recipes.json');
     const recipes = await response.json();
@@ -36,16 +36,25 @@ function displayRecipes(filteredRecipes) {
     } else {
         filteredRecipes.forEach(recipe => {
             const recipeDiv = document.createElement('div');
-            recipeDiv.classList.add('recipe');
+            recipeDiv.classList.add('recipe-card');
             recipeDiv.innerHTML = `
-                <h4>${recipe.name}</h4>
-                <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
-                <p><strong>Procedure:</strong> ${recipe.procedure}</p>
+                <img src="${recipe.image}" alt="${recipe.name}" />
+                <div class="recipe-card-content">
+                    <h3>${recipe.name}</h3>
+                    <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
+                    <p><strong>Procedure:</strong> ${recipe.procedure}</p>
+                </div>
             `;
             recipeList.appendChild(recipeDiv);
         });
     }
 }
+
+// Load all recipes when the page loads
+window.addEventListener('DOMContentLoaded', async () => {
+    const recipes = await loadRecipes();
+    displayRecipes(recipes);
+});
 
 // Add event listeners for ingredient selection
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {

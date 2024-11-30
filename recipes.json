@@ -1,77 +1,215 @@
 [
     {
         "name": "Adobo na Manok (Chicken Adobo)",
-        "ingredients": ["Chicken", "Garlic", "Onion", "Soy Sauce", "Vinegar", "Bay Leaves", "Peppercorns", "Water"],
-        "procedure": "1. Marinate chicken in soy sauce, vinegar, garlic, onion, bay leaves, and peppercorns for at least 30 minutes. 2. In a pan, cook the marinated chicken until browned. 3. Add water and simmer for 30 minutes until the sauce thickens."
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Onion",
+            "Soy Sauce",
+            "Vinegar",
+            "Bay Leaves",
+            "Peppercorns",
+            "Water"
+        ],
+        "procedure": "1. Marinate chicken in soy sauce, vinegar, garlic, onion, bay leaves, and peppercorns for at least 30 minutes. 2. In a pan, cook the marinated chicken until browned. 3. Add water and simmer for 30 minutes until the sauce thickens.",
+        "image": "https://assets.unileversolutions.com/recipes-v3/214369-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)"
     },
     {
         "name": "Sinigang na Baboy (Pork Sinigang)",
-        "ingredients": ["Tomato", "Onion", "Garlic", "Tamarind", "Pork", "Radish", "Eggplant", "Okra", "Water Spinach (Kang Kong)"],
-        "procedure": "1. Boil pork in water with onions and garlic until tender. 2. Add tomatoes and tamarind and continue to simmer. 3. Add the vegetables and cook until tender. Season with fish sauce or salt to taste."
+        "ingredients": [
+            "Tomato",
+            "Onion",
+            "Garlic",
+            "Tamarind",
+            "Pork",
+            "Radish",
+            "Eggplant",
+            "Okra",
+            "Water Spinach (Kang Kong)"
+        ],
+        "procedure": "1. Boil pork in water with onions and garlic until tender. 2. Add tomatoes and tamarind and continue to simmer. 3. Add the vegetables and cook until tender. Season with fish sauce or salt to taste.",
+        "image": "https://images.yummy.ph/yummy/uploads/2019/03/sinigangbaboysamiso-recipe-1.jpg"
     },
     {
         "name": "Chicken Inasal",
-        "ingredients": ["Chicken", "Garlic", "Onion", "Soy Sauce", "Calamansi", "Salt", "Pepper"],
-        "procedure": "1. Marinate chicken in soy sauce, garlic, onion, calamansi, salt, and pepper. 2. Grill the chicken over charcoal until cooked through. 3. Baste with the marinade while grilling."
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Onion",
+            "Soy Sauce",
+            "Calamansi",
+            "Salt",
+            "Pepper"
+        ],
+        "procedure": "1. Marinate chicken in soy sauce, garlic, onion, calamansi, salt, and pepper. 2. Grill the chicken over charcoal until cooked through. 3. Baste with the marinade while grilling.",
+        "image": "https://theodehlicious.com/wp-content/uploads/2023/12/Bacolod-Chicken-Inasal-1024x768.jpg"
     },
     {
         "name": "Lechon Kawali (Crispy Fried Pork Belly)",
-        "ingredients": ["Pork", "Garlic", "Onion", "Bay Leaves", "Salt", "Pepper", "Water", "Oil"],
-        "procedure": "1. Boil pork belly with garlic, onion, bay leaves, salt, and pepper until tender. 2. Let it cool, then deep fry until crispy. 3. Serve with lechon sauce or vinegar."
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Bay Leaves",
+            "Salt",
+            "Pepper",
+            "Water",
+            "Oil"
+        ],
+        "procedure": "1. Boil pork belly with garlic, onion, bay leaves, salt, and pepper until tender. 2. Let it cool, then deep fry until crispy. 3. Serve with lechon sauce or vinegar.",
+        "image": "https://www.allrecipes.com/thmb/amQ4Nb4tTZ6zzja3ZGiv0beS6yk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RM-237899-FilippinoLechonKawali-ddmfs-2x1-6355-bb901851b57c4827a48dff9e54d7bb3a.jpg"
     },
     {
         "name": "Pancit Canton",
-        "ingredients": ["Chicken", "Garlic", "Onion", "Carrots", "Bell Pepper", "Cabbage", "Soy Sauce", "Pancit Canton Noodles"],
-        "procedure": "1. Sauté garlic and onions. Add chicken and cook until browned. 2. Add soy sauce and vegetables. 3. Stir-fry and add the pancit canton noodles, cooking until noodles are tender."
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Onion",
+            "Carrots",
+            "Bell Pepper",
+            "Cabbage",
+            "Soy Sauce",
+            "Pancit Canton Noodles"
+        ],
+        "procedure": "1. Sauté garlic and onions. Add chicken and cook until browned. 2. Add soy sauce and vegetables. 3. Stir-fry and add the pancit canton noodles, cooking until noodles are tender.",
+        "image": "https://www.myfoodom.com/wp-content/uploads/2022/07/pancit-canton.jpg"
     },
     {
         "name": "Kare-Kare",
-        "ingredients": ["Pork", "Oxtail", "Garlic", "Onion", "Peanut Butter", "Eggplant", "String Beans", "Banana Blossom", "Basil"],
-        "procedure": "1. Boil oxtail and pork until tender. 2. Make a peanut sauce by mixing peanut butter, garlic, and onion. 3. Add the sauce to the boiled meat. 4. Add the vegetables and cook until tender. Serve with bagoong (fermented shrimp paste)."
+        "ingredients": [
+            "Pork",
+            "Oxtail",
+            "Garlic",
+            "Onion",
+            "Peanut Butter",
+            "Eggplant",
+            "String Beans",
+            "Banana Blossom",
+            "Basil"
+        ],
+        "procedure": "1. Boil oxtail and pork until tender. 2. Make a peanut sauce by mixing peanut butter, garlic, and onion. 3. Add the sauce to the boiled meat. 4. Add the vegetables and cook until tender. Serve with bagoong (fermented shrimp paste).",
+        "image": "https://yummykitchentv.com/wp-content/uploads/2023/03/pork-Pata-Kare-kare-1024x634.jpg"
     },
     {
         "name": "Bicol Express",
-        "ingredients": ["Pork", "Garlic", "Onion", "Chili Peppers", "Coconut Milk", "Shrimp Paste"],
-        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add shrimp paste, then pour in coconut milk. 3. Simmer until pork is tender and sauce thickens. Add chili peppers for spice."
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Chili Peppers",
+            "Coconut Milk",
+            "Shrimp Paste"
+        ],
+        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add shrimp paste, then pour in coconut milk. 3. Simmer until pork is tender and sauce thickens. Add chili peppers for spice.",
+        "image": "https://www.kawalingpinoy.com/wp-content/uploads/2019/05/spicy-bicol-express-3-730x973.jpg"
     },
     {
         "name": "Puto (Steamed Rice Cake)",
-        "ingredients": ["Rice Flour", "Sugar", "Coconut Milk", "Baking Powder", "Eggs", "Butter"],
-        "procedure": "1. Mix rice flour, sugar, and baking powder. 2. Add coconut milk, eggs, and melted butter. 3. Pour into molds and steam for 20 minutes."
+        "ingredients": [
+            "Rice Flour",
+            "Sugar",
+            "Coconut Milk",
+            "Baking Powder",
+            "Eggs",
+            "Butter"
+        ],
+        "procedure": "1. Mix rice flour, sugar, and baking powder. 2. Add coconut milk, eggs, and melted butter. 3. Pour into molds and steam for 20 minutes.",
+        "image": "https://i0.wp.com/iankewks.com/wp-content/uploads/2023/08/img_6516.jpg?resize=800%2C530&ssl=1"
     },
     {
         "name": "Lumpiang Shanghai (Spring Rolls)",
-        "ingredients": ["Pork", "Garlic", "Onion", "Carrots", "Spring Roll Wrappers", "Egg"],
-        "procedure": "1. Mix ground pork with garlic, onion, and grated carrots. 2. Wrap the mixture in spring roll wrappers. 3. Fry until golden brown and serve with sweet and sour sauce."
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Carrots",
+            "Spring Roll Wrappers",
+            "Egg"
+        ],
+        "procedure": "1. Mix ground pork with garlic, onion, and grated carrots. 2. Wrap the mixture in spring roll wrappers. 3. Fry until golden brown and serve with sweet and sour sauce.",
+        "image": "https://www.maggi.ph/sites/default/files/styles/home_stage_1500_700/public/srh_recipes/dc4e942c5b6ef61bc8c6c3a91bc00eb7.jpg?h=5f1b5b34&itok=r-X3qsKk"
     },
     {
         "name": "Chicken Afritada",
-        "ingredients": ["Chicken", "Garlic", "Onion", "Tomato", "Carrots", "Bell Pepper", "Potatoes", "Tomato Sauce"],
-        "procedure": "1. Sauté garlic and onions, add chicken and cook until browned. 2. Add tomato, carrots, bell pepper, and potatoes. 3. Pour in tomato sauce and cook until the sauce thickens."
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Carrots",
+            "Bell Pepper",
+            "Potatoes",
+            "Tomato Sauce"
+        ],
+        "procedure": "1. Sauté garlic and onions, add chicken and cook until browned. 2. Add tomato, carrots, bell pepper, and potatoes. 3. Pour in tomato sauce and cook until the sauce thickens.",
+        "image": "https://theskinnypot.com/wp-content/uploads/2023/11/Chicken-Afritada-with-Tomato-Sauce-800x1200.jpg"
     },
     {
         "name": "Pinakbet",
-        "ingredients": ["Pork", "Garlic", "Onion", "Tomato", "Eggplant", "Bitter Melon", "String Beans", "Shrimp Paste"],
-        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add tomatoes and cook until soft. 3. Add the vegetables and shrimp paste, then simmer until vegetables are tender."
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Eggplant",
+            "Bitter Melon",
+            "String Beans",
+            "Shrimp Paste"
+        ],
+        "procedure": "1. Sauté garlic and onions, add pork and cook until browned. 2. Add tomatoes and cook until soft. 3. Add the vegetables and shrimp paste, then simmer until vegetables are tender.",
+        "image": "https://www.foxyfolksy.com/wp-content/uploads/2016/09/pinakbet-recipe.jpg"
     },
     {
         "name": "Laing",
-        "ingredients": ["Pork", "Garlic", "Chili Peppers", "Coconut Milk", "Taro Leaves"],
-        "procedure": "1. Sauté pork and garlic, add shrimp paste, then pour in coconut milk. 2. Add the dried taro leaves and simmer until thickened."
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Chili Peppers",
+            "Coconut Milk",
+            "Taro Leaves"
+        ],
+        "procedure": "1. Sauté pork and garlic, add shrimp paste, then pour in coconut milk. 2. Add the dried taro leaves and simmer until thickened.",
+        "image": "https://assets.unileversolutions.com/recipes-v3/110738-default.jpg?im=AspectCrop=(720,459);Resize=(720,459)"
     },
     {
         "name": "Pancit Malabon",
-        "ingredients": ["Pancit Malabon Noodles", "Shrimp", "Garlic", "Onion", "Fish Sauce", "Chicharrón"],
-        "procedure": "1. Sauté garlic and onions, add shrimp and cook. 2. Add pancit malabon noodles and fish sauce. 3. Top with hard-boiled eggs and chicharrón."
+        "ingredients": [
+            "Pancit Malabon Noodles",
+            "Shrimp",
+            "Garlic",
+            "Onion",
+            "Fish Sauce",
+            "Chicharrón"
+        ],
+        "procedure": "1. Sauté garlic and onions, add shrimp and cook. 2. Add pancit malabon noodles and fish sauce. 3. Top with hard-boiled eggs and chicharrón.",
+        "image": "https://assets.unileversolutions.com/recipes-v2/237857.jpg?im=Resize,height=580;Crop,size=(632,580),gravity=Center"
     },
     {
         "name": "Tuna Sisig",
-        "ingredients": ["Tuna", "Onion", "Garlic", "Chili Peppers", "Lemon", "Soy Sauce"],
-        "procedure": "1. Sauté garlic and onions, add tuna and cook until browned. 2. Add chili peppers, soy sauce, and lemon juice. 3. Serve sizzling on a hot plate."
+        "ingredients": [
+            "Tuna",
+            "Onion",
+            "Garlic",
+            "Chili Peppers",
+            "Lemon",
+            "Soy Sauce"
+        ],
+        "procedure": "1. Sauté garlic and onions, add tuna and cook until browned. 2. Add chili peppers, soy sauce, and lemon juice. 3. Serve sizzling on a hot plate.",
+        "image": "https://i0.wp.com/mamalolacooks.com/wp-content/uploads/2024/03/5DF6E666-47FE-4F05-B705-46685F6E92A7.jpeg?resize=750%2C782&ssl=1"
     },
     {
         "name": "Caldereta",
-        "ingredients": ["Beef", "Garlic", "Onion", "Tomato", "Potatoes", "Carrots", "Bell Pepper", "Tomato Sauce"],
-        "procedure": "1. Sauté garlic and onions, add beef and cook until browned. 2. Add tomato and vegetables, then pour in tomato sauce. 3. Simmer until beef is tender."
+        "ingredients": [
+            "Beef",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Potatoes",
+            "Carrots",
+            "Bell Pepper",
+            "Tomato Sauce"
+        ],
+        "procedure": "1. Sauté garlic and onions, add beef and cook until browned. 2. Add tomato and vegetables, then pour in tomato sauce. 3. Simmer until beef is tender.",
+        "image": "https://api.lifegetsbetter.ph/uploads/recipes/featured/Caldereta.jpg"
     }
 ]

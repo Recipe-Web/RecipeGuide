@@ -1,0 +1,408 @@
+/* General Reset */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f9f9f9;
+    color: #0D1419;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background-image: linear-gradient(230deg, #253A4A 93%, #E0A840 1%);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0px 200px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar nav {
+    align-content: center;
+}
+
+.navbar a {
+    font-size: 1.1rem;
+}
+
+.picTitle {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.picTitle img {
+    width: 10%;
+}
+
+.navbar h1 {
+    font-size: 2.0rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #18bc9c;
+}
+
+main {
+    margin-right: 120px;
+    margin-left: 120px;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.home h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.home p {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.images {
+    display: flex;
+    padding: 10px 100px;
+    height: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: inherit;
+}
+
+.images img {
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.tagline-container {
+    font-style: italic;
+    text-align: center;
+    padding: 30px;
+    background-color: #253A4A;
+    color: white;
+    border-radius: 40px;
+}
+
+.ingredient-section {
+    display: flex;
+    justify-content: center;
+    gap: 970px;
+}
+
+.ingredient-section h2 {
+    align-content: center;
+    font-size: 30px;
+}
+
+/* General form styling */
+form.d-flex {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+form.d-flex .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+form.d-flex .btn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form.d-flex .btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    form.d-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form.d-flex .form-control,
+    form.d-flex .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    form.d-flex .btn {
+        margin-top: 10px;
+    }
+}
+
+/* Cards Styling */
+.cards-checkboxes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.card {
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    transform: scale(1.10);
+}
+
+.card img {
+    object-fit: cover;
+    height: 120px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.card label {
+    font-size: 1.2rem;
+}
+
+/* Style for the recipe results section */
+.recipe-results {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Heading style */
+.recipe-results h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style for the list of recipes */
+#recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Style for individual recipe cards */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image doesn't overflow the card */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+/* Hover effect for the card */
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+/* Style for recipe image */
+.recipe-card img {
+    width: 100%; /* Make the image span the whole width */
+    height: 180px; /* Set fixed height for images */
+    object-fit: cover; /* Make the image cover the area without distortion */
+}
+
+/* Style for card content (title, ingredients, and procedure) */
+.recipe-card-content {
+    padding: 15px;
+    align-items: center;
+}
+
+/* Recipe name/title */
+.recipe-card h3 {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+/* Recipe details (ingredients and procedure) */
+.recipe-card p {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.5;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(230deg, #253A4A 90%, #E0A840 1%);  /* Gradient background */
+    color: white;                                      /* White text color */
+    padding: 20px 20px;                                /* Padding for spacing */
+    text-align: center;                                /* Centered text */
+    font-family: 'Arial', sans-serif;                   /* Font style */
+}
+
+/* Container to align items */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 30%;
+}
+
+/* Footer Logo and Description */
+.footer-logo h2 {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+/* Footer Links Section */
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 10px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;  /* Golden color on hover */
+}
+
+/* Social Media Icons Section */
+.footer-socials {
+    margin-top: 20px;
+}
+
+.footer-socials h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: rgba(0, 0, 0, 0.5);  /* Darker background on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo, .footer-links, .footer-socials {
+        margin-bottom: 20px;
+    }
+}
+
+
+
