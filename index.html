@@ -55,7 +55,7 @@
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" aria-label="Search" id="searchApplet"
-                    placeholder="Search applets...">
+                    placeholder="Search Ingredients...">
                 <button class="btn" type="submit">Search</button>
             </form>
         </div>
@@ -157,6 +157,45 @@
         <section class="recipe-results">
             <h2>Recipes with Selected Ingredients</h2>
             <div id="recipe-list"></div> <!-- Recipe list will be dynamically generated here -->
+        </section>
+
+        <!-- Modal (popup) for showing procedure -->
+        <div id="procedure-modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <h3 id="modal-recipe-name"></h3>
+                <p id="modal-procedure"></p>
+            </div>
+        </div>
+
+
+        <section class="about">
+            <div>
+                <h1>About</h1>
+                <p>About the Food Wars Recipe Guide
+                    Welcome to the Food Wars Recipe Guide, where you can bring the magic of your favorite culinary
+                    battles to life in your own kitchen! Inspired by the dynamic and delicious world of Food Wars!
+                    Shokugeki no Soma, this interactive guide allows you to select ingredients from a wide array of
+                    options and instantly discover unique and mouth-watering recipes.
+
+                    Whether you’re a seasoned chef or a home cook, our guide helps you create dishes inspired by the
+                    intense and flavorful creations from the anime. Simply choose the ingredients you have on hand, and
+                    the guide will generate a recipe that matches your selection. Explore new combinations, try out
+                    intricate techniques, or replicate signature dishes that have dazzled the judges of Totsuki Culinary
+                    Academy.
+
+                    Features:
+                    Dynamic Ingredient Selection: Choose from a range of ingredients (vegetables, meats, spices, and
+                    more!) and let the guide show you what amazing dishes you can create.
+                    Anime-Inspired Recipes: Recreate iconic dishes from Food Wars, including daring creations seen in
+                    the anime, or come up with your own culinary masterpieces.
+                    Step-by-Step Instructions: Every recipe comes with clear, easy-to-follow steps to help you prepare,
+                    cook, and present like a pro.
+                    Flavor Pairing Tips: Discover new flavor combinations and tips inspired by the creativity and
+                    techniques of the show's chefs.
+                    Ready to make your culinary skills sizzle like Soma Yukihira in the kitchen? Select your
+                    ingredients, and let the Food Wars Recipe Guide guide you to a delicious victory!</p>
+            </div>
         </section>
 
     </main>
