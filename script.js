@@ -8,7 +8,7 @@ async function loadRecipes() {
 // Get selected ingredients
 function getSelectedIngredients() {
     const selectedIngredients = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 20; i++) {
         if (document.getElementById(`ingredient${i}`).checked) {
             selectedIngredients.push(document.getElementById(`ingredient${i}`).nextSibling.textContent.trim());
         }
@@ -94,3 +94,21 @@ window.addEventListener('DOMContentLoaded', async () => {
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', filterRecipes);
 });
+
+// Function for the search bar to filter ingredients
+function filterIngredients() {
+    const searchTerm = document.getElementById('searchIngredients').value.toLowerCase();
+    const ingredientCards = document.querySelectorAll('.card');
+    
+    ingredientCards.forEach(card => {
+        const ingredientName = card.querySelector('.card-body label').textContent.trim().toLowerCase();
+        if (ingredientName.includes(searchTerm)) {
+            card.style.display = 'block'; // Show the card if it matches the search term
+        } else {
+            card.style.display = 'none'; // Hide the card if it does not match
+        }
+    });
+}
+
+// Add event listener for the search input field
+document.getElementById('searchIngredients').addEventListener('keyup', filterIngredients);

@@ -3,7 +3,7 @@
 
 * {
     box-sizing: border-box;
-    
+    /*border: 1px solid red;*/
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 
 /* Header Section */
 header {
-    background-image: linear-gradient(230deg, #253A4A 93%, #E0A840 1%);
+    background-image: linear-gradient(240deg, #253A4A 60%, #E0A840 100%);
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -262,9 +262,9 @@ input[type="checkbox"] {
 
 /* Animation for the checkmark (using pseudo-element) */
 input[type="checkbox"]:checked {
-    background-color: #E0A840;
+    background-color: #45a049;
     /* Green when checked */
-    border-color: #E0A840;
+    border-color: #45a049;
     animation: checkmark-animation 0.3s ease-in-out forwards;
 }
 
@@ -322,9 +322,9 @@ input[type="checkbox"]:hover {
 }
 
 input[type="checkbox"]:checked:hover {
-    background-color: #45a049;
+    background-color: #E0A840;
     /* Hover effect when checked */
-    border-color: #45a049;
+    border-color: #E0A840;
 }
 
 

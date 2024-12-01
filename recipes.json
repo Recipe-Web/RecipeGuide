@@ -211,5 +211,77 @@
         ],
         "procedure": "1. Sauté garlic and onions, add beef and cook until browned. 2. Add tomato and vegetables, then pour in tomato sauce. 3. Simmer until beef is tender.",
         "image": "https://api.lifegetsbetter.ph/uploads/recipes/featured/Caldereta.jpg"
+    }, 
+    {
+        "name": "Pochero (Pork Stew)",
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Banana",
+            "Potatoes",
+            "Chorizo",
+            "Peas",
+            "Cabbage"
+        ],
+        "procedure": "1. Sauté garlic, onion, and tomato. 2. Add pork and chorizo, cook until browned. 3. Add potatoes and water, then simmer until pork is tender. 4. Add peas, cabbage, and banana, then cook until tender.",
+        "image": "https://www.recipesbynora.com/wp-content/uploads/2023/10/Pochero-with-Pork-featured-image-1.jpg"
+    },
+    {
+        "name": "Bistek Tagalog",
+        "ingredients": [
+            "Beef",
+            "Garlic",
+            "Onion",
+            "Soy Sauce",
+            "Lemon",
+            "Pepper",
+            "Bay Leaves"
+        ],
+        "procedure": "1. Marinate beef in soy sauce, garlic, lemon, pepper, and bay leaves. 2. Sauté onions, then cook marinated beef until browned. 3. Simmer with the marinade until sauce thickens.",
+        "image": "https://cdn.sanity.io/images/f3knbc2s/production/b5318405e36335e00e82b10ffcf7b439fff513af-2500x1600.jpg"
+    },
+    {
+        "name": "Munggo Guisado (Mung Bean Stew)",
+        "ingredients": [
+            "Mung Beans",
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Spinach",
+            "Fish Sauce"
+        ],
+        "procedure": "1. Boil mung beans until soft. 2. Sauté garlic, onion, and tomato, then add pork and cook until browned. 3. Add the boiled mung beans and simmer. 4. Add spinach and season with fish sauce.",
+        "image": "https://www.felicemadethis.com/wp-content/uploads/2021/03/52B348F1-94D9-4F2D-837F-963E47BA2FFC-scaled.jpeg"
+    },
+    {
+        "name": "Pork Binagoongan",
+        "ingredients": [
+            "Pork",
+            "Garlic",
+            "Onion",
+            "Tomato",
+            "Shrimp Paste",
+            "Eggplant",
+            "Chili Peppers"
+        ],
+        "procedure": "1. Sauté garlic, onion, and tomato, then add pork and cook until browned. 2. Add shrimp paste and cook for a few minutes. 3. Add eggplant and chili peppers, cook until tender.",
+        "image": "https://www.recipesbynora.com/wp-content/uploads/2023/06/Pork-Binagoongan-Pork-with-Shrimp-Paste-featured-image.jpg"
+    },
+    {
+        "name": "Tinola (Chicken Soup)",
+        "ingredients": [
+            "Chicken",
+            "Garlic",
+            "Onion",
+            "Ginger",
+            "Papaya",
+            "Chili Leaves"
+        ],
+        "procedure": "1. Sauté garlic, onion, and ginger. 2. Add chicken and cook until browned. 3. Add water and bring to a boil, then add papaya and chili leaves. 4. Simmer until chicken is cooked through.",
+        "image": "https://images.ctfassets.net/pxcfulgsd9e2/5AdDxxvnSrsaRFZtkI0yws/e68046e73433905178dee2a0909a45df/Chicken_Tinola_recipe_HN3483_Recipe_Cover_Sized.jpg"
     }
+    
 ]
