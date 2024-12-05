@@ -15,7 +15,7 @@
             </div>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="#ingredients">Ingredients</a>
+                <a href="#ingredients.html">Ingredients</a>
                 <a href="recipe.html">Recipes</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
@@ -24,7 +24,7 @@
     </header>
 
     <main>
-    <div class="container">
+    <div class="container" id="ingredients">
         <section class="ingredient-selection">
             <h2>Select Ingredients</h2>
             <div class="ingredient-checkboxes">
@@ -41,9 +41,11 @@
                 <!-- You can add more ingredients if needed -->
             </div>
         </section>
+        </main>
 
+        <main>
         <section class="recipe-results">
-            <h2>Recipes with Selected Ingredients</h2>
+            <h2>Recipes with Selected Ingredients:</h2>
             <div id="recipe-list"></div>
         </section>
     </div>
@@ -71,13 +73,15 @@
         async function filterRecipes() {
             const selectedIngredients = getSelectedIngredients();
             const recipes = await loadRecipes();
-            const filteredRecipes = recipes.filter(recipe => {
-                return selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient));
-            });
+            const filteredRecipes = selectedIngredients.length === 0 
+                ? recipes // Show all recipes if no ingredients are selected
+                : recipes.filter(recipe => 
+                    selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient))
+                );
             displayRecipes(filteredRecipes);
         }
     
-        // Display filtered recipes
+        // Display recipes
         function displayRecipes(filteredRecipes) {
             const recipeList = document.getElementById('recipe-list');
             recipeList.innerHTML = '';
@@ -99,11 +103,21 @@
             }
         }
     
+        // Initial load of recipes
+        async function initializeRecipes() {
+            const recipes = await loadRecipes();
+            displayRecipes(recipes);
+        }
+    
         // Add event listeners for ingredient selection
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', filterRecipes);
         });
+    
+        // Load all recipes on page load
+        window.addEventListener('DOMContentLoaded', initializeRecipes);
     </script>
+    
     </main>
 </body>
 </html>

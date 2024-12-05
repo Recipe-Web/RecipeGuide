@@ -143,14 +143,18 @@ main {
 }
 
 .recipe p {
-    color: #7f8c8d;
+    color: #000000;
 }
 .recipe-image {
-    max-width: 100%;
-    height: auto;
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
-    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
 }
+
 
 /* Footer */
 footer {
