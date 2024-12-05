@@ -7,6 +7,23 @@
     <title>Filipino Recipes</title>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <div class="picTitle">
+                <img src="images/logo.png" alt="logo">
+                <h1>FOOD WARS</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#ingredients">Ingredients</a>
+                <a href="recipe.html">Recipes</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
     <div class="container">
         <section class="ingredient-selection">
             <h2>Select Ingredients</h2>
@@ -38,7 +55,7 @@
             const recipes = await response.json();
             return recipes;
         }
-
+    
         // Get selected ingredients
         function getSelectedIngredients() {
             const selectedIngredients = [];
@@ -49,7 +66,7 @@
             }
             return selectedIngredients;
         }
-
+    
         // Filter recipes based on selected ingredients
         async function filterRecipes() {
             const selectedIngredients = getSelectedIngredients();
@@ -59,12 +76,12 @@
             });
             displayRecipes(filteredRecipes);
         }
-
+    
         // Display filtered recipes
         function displayRecipes(filteredRecipes) {
             const recipeList = document.getElementById('recipe-list');
             recipeList.innerHTML = '';
-
+    
             if (filteredRecipes.length === 0) {
                 recipeList.innerHTML = '<p>No recipes found with the selected ingredients.</p>';
             } else {
@@ -73,6 +90,7 @@
                     recipeDiv.classList.add('recipe');
                     recipeDiv.innerHTML = `
                         <h4>${recipe.name}</h4>
+                        <img src="${recipe.image}" alt="${recipe.name}" class="recipe-image" />
                         <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
                         <p><strong>Procedure:</strong> ${recipe.procedure}</p>
                     `;
@@ -80,11 +98,12 @@
                 });
             }
         }
-
+    
         // Add event listeners for ingredient selection
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', filterRecipes);
         });
     </script>
+    </main>
 </body>
 </html>
