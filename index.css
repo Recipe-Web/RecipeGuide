@@ -3,7 +3,7 @@
 
 * {
     box-sizing: border-box;
-    /*border: 1px solid red;*/
+    border: 1px solid red;
 }
 
 body {
@@ -27,41 +27,87 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-}
-
-.navbar nav {
-    display: flex;
-}
-
-.navbar a {
-    font-size: 1.1rem;
+    padding: 10px 20px;
 }
 
 .picTitle {
     display: flex;
-    align-items: center;
-    gap: 20px;
 }
 
 .picTitle img {
-    width: 10%;
+    height: 50px;
 }
 
-.navbar h1 {
-    font-size: 2.0rem;
+.picTitle h1 {
+    color: #fff;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 1rem;
-    transition: color 0.3s;
+    padding: 10px;
 }
 
 nav a:hover {
-    color: #18bc9c;
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    background-color: #fff;
+    height: 3px;
+    width: 100%;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: row;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    nav a {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid #555;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.open + .nav-links {
+        display: flex;
+    }
+}
+
+/* When Hamburger menu is open */
+.hamburger.open {
+    transform: rotate(90deg);
 }
 
 main {
@@ -327,9 +373,15 @@ input[type="checkbox"]:checked:hover {
     border-color: #E0A840;
 }
 
-
-
 /* Style for the recipe results section */
+
+.recipe-title {
+    background-color: #45a049;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-items: center;
+}
+
 .recipe-results {
     background-color: #f9f9f9;
     padding: 20px;
@@ -343,8 +395,9 @@ input[type="checkbox"]:checked:hover {
 .recipe-results h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
 }
 
 /* Style for the list of recipes */
