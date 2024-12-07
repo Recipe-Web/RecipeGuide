@@ -1,11 +1,6 @@
 /* General Reset */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
 
-* {
-    box-sizing: border-box;
-    border: 1px solid red;
-}
-
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #f9f9f9;
@@ -21,7 +16,10 @@ header {
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
 }
+
 
 .navbar {
     display: flex;
@@ -55,10 +53,52 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #E0A840;
     border-radius: 5px;
+    color: #0D1419;
 }
 
+/*buttons gurl*/
+.btn{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.btn .nxt{
+    background-color: #253A4A;
+    color: #bbb;
+    margin: 5px;
+    border: none;
+
+}
+.btn .prev{
+    background-color: #253A4A;
+    color: #bbb;
+    margin: 5px;
+    border: none;
+}
+
+.btn2{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.btn2 .nxt2{
+    background-color: #45a049;
+    color: white;
+    margin: 5px;
+    border: none;
+
+}
+.btn2 .prev2{
+    background-color: #45a049;
+    color: white;
+    margin: 5px;
+    border: none;
+}
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -127,11 +167,16 @@ main {
 .home h1 {
     font-size: 3rem;
     text-align: center;
+    box-sizing: border-box;
+    background-color: #E0A840;
+    border-radius: 20px;
 }
 
 .home p {
     margin-left: 50px;
     margin-right: 50px;
+    text-align: justify;
+    
 }
 
 .images {
@@ -696,4 +741,7 @@ footer {
     .footer-bottom {
         font-size: 12px;
     }
+}
+.about p{
+    text-align: justify;
 }
