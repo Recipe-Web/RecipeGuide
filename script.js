@@ -1,3 +1,8 @@
+document.getElementById("hamburger").addEventListener("click", function() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+});
+
 // Fetch the recipes from the JSON file 
 async function loadRecipes() {
     const response = await fetch('recipes.json');
@@ -16,13 +21,19 @@ function getSelectedIngredients() {
     return selectedIngredients;
 }
 
-// Filter recipes based on selected ingredients
+// Filter recipes based on selected ingredients and search query
 async function filterRecipes() {
     const selectedIngredients = getSelectedIngredients();
+    const searchQuery = document.getElementById('recipe-search').value.toLowerCase();
     const recipes = await loadRecipes();
+
+    // Filter recipes by ingredients and search query
     const filteredRecipes = recipes.filter(recipe => {
-        return selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient));
+        const matchesIngredients = selectedIngredients.every(ingredient => recipe.ingredients.includes(ingredient));
+        const matchesSearch = recipe.name.toLowerCase().includes(searchQuery) || recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchQuery));
+        return matchesIngredients && matchesSearch;
     });
+
     displayRecipes(filteredRecipes);
 }
 
@@ -32,18 +43,18 @@ function displayRecipes(filteredRecipes) {
     recipeList.innerHTML = '';
 
     if (filteredRecipes.length === 0) {
-        recipeList.innerHTML = '<p>No recipes found with the selected ingredients.</p>';
+        recipeList.innerHTML = '<p>No recipes found with the selected ingredients or search query.</p>';
     } else {
         filteredRecipes.forEach(recipe => {
             const recipeDiv = document.createElement('div');
             recipeDiv.classList.add('recipe-card');
             recipeDiv.innerHTML = `
                 <img src="${recipe.image}" alt="${recipe.name}" />
-                <div class="recipe-card-content">
-                    <h3>${recipe.name}</h3>
+                <div class="recipe-card-content"; style="height:35%">
+                    <h3 style="height: 35%">${recipe.name}</h3>
                     <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
-                    <button class="show-procedure-btn" data-recipe-name="${recipe.name}" data-recipe-procedure="${recipe.procedure}">Show Procedure</button>
                 </div>
+                <button class="show-procedure-btn" style="border: none" data-recipe-name="${recipe.name}" data-recipe-procedure="${recipe.procedure}">Show Procedure</button>
             `;
             recipeList.appendChild(recipeDiv);
         });
@@ -90,25 +101,61 @@ window.addEventListener('DOMContentLoaded', async () => {
     displayRecipes(recipes);
 });
 
-// Add event listeners for ingredient selection
+// Add event listeners for ingredient selection and search input
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
     checkbox.addEventListener('change', filterRecipes);
 });
 
-// Function for the search bar to filter ingredients
-function filterIngredients() {
-    const searchTerm = document.getElementById('searchIngredients').value.toLowerCase();
-    const ingredientCards = document.querySelectorAll('.card');
-    
-    ingredientCards.forEach(card => {
-        const ingredientName = card.querySelector('.card-body label').textContent.trim().toLowerCase();
-        if (ingredientName.includes(searchTerm)) {
-            card.style.display = 'block'; // Show the card if it matches the search term
-        } else {
-            card.style.display = 'none'; // Hide the card if it does not match
+document.getElementById('recipe-search').addEventListener('input', filterRecipes);
+
+
+
+
+
+
+
+// Number of cards per page
+const cardsPerPage = 4;
+let currentPage = 1;
+
+// Get all the cards
+const cards = document.querySelectorAll('.cards-checkboxes .card');
+const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+// Function to show only the cards for the current page
+function showCardsForPage() {
+    // Hide all cards
+    cards.forEach(card => card.style.display = 'none');
+
+    // Calculate the start and end indices for the current page
+    const start = (currentPage - 1) * cardsPerPage;
+    const end = start + cardsPerPage;
+
+    // Show the cards for the current page
+    for (let i = start; i < end; i++) {
+        if (cards[i]) {
+            cards[i].style.display = 'block';
         }
-    });
+    }
+
+    // Disable/Enable buttons based on the current page
+    document.getElementById('prev-button').disabled = currentPage === 1;
+    document.getElementById('next-button').disabled = currentPage === totalPages;
 }
 
-// Add event listener for the search input field
-document.getElementById('searchIngredients').addEventListener('keyup', filterIngredients);
+// Function to change the page when the user clicks next or back
+function changePage(direction) {
+    currentPage += direction;
+
+    // Ensure we stay within bounds
+    if (currentPage < 1) {
+        currentPage = 1;
+    } else if (currentPage > totalPages) {
+        currentPage = totalPages;
+    }
+
+    showCardsForPage();
+}
+
+// Initialize the page by showing the cards for the first page
+showCardsForPage();

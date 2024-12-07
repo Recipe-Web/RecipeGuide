@@ -22,9 +22,9 @@
             <nav class="nav-links">
                 <a href="#">Home</a>
                 <a href="#ingredients">Ingredients</a>
-                <a href="#">Recipes</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#recipe-list">Recipes</a>
+                <a href="#aboutsection">About</a>
+                <a href="#footer">Contact</a>
             </nav>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -33,6 +33,7 @@
             </div>
         </div>
     </header>
+
 
 
     <main>
@@ -56,198 +57,211 @@
             <h2>"Where Every Meal is a New Adventure!"</h2>
         </div>
 
-        <div class="ingredient-section" id="ingredients">
-            <h2>Ingredients</h2>
-
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" aria-label="Search" id="searchIngredients"
-                    placeholder="Search Ingredient...">
-                <button class="btn" type="submit">Search</button>
-            </form>
-
-        </div>
 
         <!--selecting ingredients -->
-        <section class="cards-checkboxes">
-            <div class="card">
-                <img src="https://www.bradleysmoker.com/cdn/shop/articles/Smoked-Marinated-Eggplant-Recipe-scaled.jpg?v=1675739133&width=1500"
-                    class="card-img-top" alt="Eggplant">
-                <div class="card-body">
-                    <h5 class="card-title">A tender, slightly earthy vegetable that absorbs flavors beautifully when
-                        cooked.</h5>
-                    <label><input type="checkbox" id="ingredient1"> Eggplant</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
-                    class="card-img-top" alt="Onion">
-                <div class="card-body">
-                    <h5 class="card-title">A savory, aromatic bulb that adds sweetness and depth to dishes when sautéed
-                        or caramelized.</h5>
-                    <label><input type="checkbox" id="ingredient2"> Onion</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN313-Tomatoes-732x549-Thumb.jpg"
-                    class="card-img-top" alt="Tomato">
-                <div class="card-body">
-                    <h5 class="card-title">A juicy, tangy fruit that adds freshness and acidity to dishes.</h5>
-                    <label><input type="checkbox" id="ingredient3"> Tomato</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://post.healthline.com/wp-content/uploads/2018/06/garlic-1296x728-header.jpg"
-                    class="card-img-top" alt="Garlic">
-                <div class="card-body">
-                    <h5 class="card-title">A pungent and flavorful bulb that imparts a savory, aromatic depth to
-                        cooking.</h5>
-                    <label><input type="checkbox" id="ingredient4"> Garlic</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
-                    class="card-img-top" alt="Soy Sauce">
-                <div class="card-body">
-                    <h5 class="card-title">A salty, fermented liquid that adds umami and a rich depth of flavor to
-                        dishes.</h5>
-                    <label><input type="checkbox" id="ingredient5"> Soy Sauce</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.banhambutchers.co.uk/wp-content/uploads/2015/09/website3-016.jpg"
-                    class="card-img-top" alt="Chicken">
-                <div class="card-body">
-                    <h5 class="card-title">A lean, versatile protein that absorbs surrounding flavors while adding
-                        richness and tenderness.</h5>
-                    <label><input type="checkbox" id="ingredient6"> Chicken</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://s3.amazonaws.com/grazecart/sparrowhillfarm/images/1679581750_641c62364aff6.jpg"
-                    class="card-img-top" alt="Pork">
-                <div class="card-body">
-                    <h5 class="card-title">A succulent and flavorful meat with a slightly sweet, savory taste that pairs
-                        well with various spices.</h5>
-                    <label><input type="checkbox" id="ingredient7"> Pork</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.grocery.coop/sites/default/files/wp-content/uploads/2011/06/Bell_Peppers_0.jpg"
-                    class="card-img-top" alt="Bell Pepper">
-                <div class="card-body">
-                    <h5 class="card-title">A sweet, crunchy vegetable that adds color, freshness, and mild flavor to
-                        dishes.</h5>
-                    <label><input type="checkbox" id="ingredient8"> Bell Pepper</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.eatdat.com/wp-content/uploads/2021/12/Chili-Pepper-e1640676095474.jpg"
-                    class="card-img-top" alt="Chili Peppers">
-                <div class="card-body">
-                    <h5 class="card-title">Spicy, pungent peppers that add heat and intensity to any dish.</h5>
-                    <label><input type="checkbox" id="ingredient9"> Chili Peppers</label>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://www.anveya.com/cdn/shop/articles/Benefits_of_Coconut_Milk_for_Skin_Hair_and_Health_resized_1.jpg?v=1598859074&width=1000"
-                    class="card-img-top" alt="Coconut Milk">
-                <div class="card-body">
-                    <h5 class="card-title">A creamy, slightly sweet liquid made from pressed coconut flesh that adds
-                        richness and a tropical flavor to dishes.</h5>
-                    <label><input type="checkbox" id="ingredient10"> Coconut Milk</label>
-                </div>
+
+
+
+        <section class="cards-checkboxes" id="ingredients">
+
+            <div class="backbutton-container">
+                <button id="prev-button" onclick="changePage(-1)" class="navigation-button left">Back</button>
             </div>
 
-            <div class="card">
-                <img src="https://www.allrecipes.com/thmb/0b6D_ZfdVD07bPrM3_0LQmml74Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1147545054-2000-cf62d6b8188846518193157fba8449be.jpg"
-                    class="card-img-top" alt="Tamarind">
-                <div class="card-body">
-                    <h5 class="card-title">A tangy fruit often used to provide a sour base for stews and soups.</h5>
+            <div class="cardsHere">
+                <div class="card">
+                    <img src="https://www.bradleysmoker.com/cdn/shop/articles/Smoked-Marinated-Eggplant-Recipe-scaled.jpg?v=1675739133&width=1500"
+                        class="card-img-top" alt="Eggplant">
+                    <div class="card-body">
+                        <h5 class="card-title">A tender, slightly earthy vegetable that absorbs flavors beautifully when
+                            cooked.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient1"> Eggplant</label>
+                </div>
+                <div class="card">
+                    <img src="https://canadianfoodfocus.org/wp-content/uploads/2020/09/types-of-onions-1024x576.jpg"
+                        class="card-img-top" alt="Onion">
+                    <div class="card-body">
+                        <h5 class="card-title">A savory, aromatic bulb that adds sweetness and depth to dishes when
+                            sautéed
+                            or caramelized.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient2"> Onion</label>
+                </div>
+                <div class="card">
+                    <img src="https://media.post.rvohealth.io/wp-content/uploads/2020/09/AN313-Tomatoes-732x549-Thumb.jpg"
+                        class="card-img-top" alt="Tomato">
+                    <div class="card-body">
+                        <h5 class="card-title">A juicy, tangy fruit that adds freshness and acidity to dishes.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient3"> Tomato</label>
+                </div>
+                <div class="card">
+                    <img src="https://post.healthline.com/wp-content/uploads/2018/06/garlic-1296x728-header.jpg"
+                        class="card-img-top" alt="Garlic">
+                    <div class="card-body">
+                        <h5 class="card-title">A pungent and flavorful bulb that imparts a savory, aromatic depth to
+                            cooking.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient4"> Garlic</label>
+                </div>
+                <div class="card">
+                    <img src="https://www.kikkoman.eu/fileadmin/_processed_/3/6/csm_Kikkoman_Quality_FeaturesofKikkomanSoySauce_02_NoArtificial_Desktop_2x_85f9477baa.webp"
+                        class="card-img-top" alt="Soy Sauce">
+                    <div class="card-body">
+                        <h5 class="card-title">A salty, fermented liquid that adds umami and a rich depth of flavor to
+                            dishes.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient5"> Soy Sauce</label>
+                </div>
+                <div class="card">
+                    <img src="https://www.banhambutchers.co.uk/wp-content/uploads/2015/09/website3-016.jpg"
+                        class="card-img-top" alt="Chicken">
+                    <div class="card-body">
+                        <h5 class="card-title">A lean, versatile protein that absorbs surrounding flavors while adding
+                            richness and tenderness.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient6"> Chicken</label>
+                </div>
+                <div class="card">
+                    <img src="https://s3.amazonaws.com/grazecart/sparrowhillfarm/images/1679581750_641c62364aff6.jpg"
+                        class="card-img-top" alt="Pork">
+                    <div class="card-body">
+                        <h5 class="card-title">A succulent and flavorful meat with a slightly sweet, savory taste that
+                            pairs
+                            well with various spices.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient7"> Pork</label>
+                </div>
+                <div class="card">
+                    <img src="https://www.grocery.coop/sites/default/files/wp-content/uploads/2011/06/Bell_Peppers_0.jpg"
+                        class="card-img-top" alt="Bell Pepper">
+                    <div class="card-body">
+                        <h5 class="card-title">A sweet, crunchy vegetable that adds color, freshness, and mild flavor to
+                            dishes.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient8"> Bell Pepper</label>
+                </div>
+                <div class="card">
+                    <img src="https://www.eatdat.com/wp-content/uploads/2021/12/Chili-Pepper-e1640676095474.jpg"
+                        class="card-img-top" alt="Chili Peppers">
+                    <div class="card-body">
+                        <h5 class="card-title">Spicy, pungent peppers that add heat and intensity to any dish.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient9"> Chili Peppers</label>
+                </div>
+                <div class="card">
+                    <img src="https://www.anveya.com/cdn/shop/articles/Benefits_of_Coconut_Milk_for_Skin_Hair_and_Health_resized_1.jpg?v=1598859074&width=1000"
+                        class="card-img-top" alt="Coconut Milk">
+                    <div class="card-body">
+                        <h5 class="card-title">A creamy, slightly sweet liquid made from pressed coconut flesh that adds
+                            richness and a tropical flavor to dishes.</h5>
+                    </div>
+                    <label><input type="checkbox" id="ingredient10"> Coconut Milk</label>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.allrecipes.com/thmb/0b6D_ZfdVD07bPrM3_0LQmml74Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1147545054-2000-cf62d6b8188846518193157fba8449be.jpg"
+                        class="card-img-top" alt="Tamarind">
+                    <div class="card-body">
+                        <h5 class="card-title">A tangy fruit often used to provide a sour base for stews and soups.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient11"> Tamarind</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://i.ebayimg.com/images/g/7ecAAOSwO6FjL-I4/s-l1200.jpg" class="card-img-top"
-                    alt="Banana Blossom">
-                <div class="card-body">
-                    <h5 class="card-title">A fibrous flower from the banana plant, commonly used in stews and curries.
-                    </h5>
+                <div class="card">
+                    <img src="https://i.ebayimg.com/images/g/7ecAAOSwO6FjL-I4/s-l1200.jpg" class="card-img-top"
+                        alt="Banana Blossom">
+                    <div class="card-body">
+                        <h5 class="card-title">A fibrous flower from the banana plant, commonly used in stews and
+                            curries.
+                        </h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient12"> Banana Blossom</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://5.imimg.com/data5/KF/XB/MY-7426969/fish-sauce-1000x1000.jpg" class="card-img-top"
-                    alt="Fish Sauce">
-                <div class="card-body">
-                    <h5 class="card-title">A fermented sauce used to add umami flavor to a variety of Filipino dishes.
-                    </h5>
+                <div class="card">
+                    <img src="https://5.imimg.com/data5/KF/XB/MY-7426969/fish-sauce-1000x1000.jpg" class="card-img-top"
+                        alt="Fish Sauce">
+                    <div class="card-body">
+                        <h5 class="card-title">A fermented sauce used to add umami flavor to a variety of Filipino
+                            dishes.
+                        </h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient13"> Fish Sauce</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://marcobeveragesystems.com/wp-content/uploads/2021/11/pexels-pixabay-416528-1.jpg"
-                    class="card-img-top" alt="Water">
-                <div class="card-body">
-                    <h5 class="card-title">Water is a key ingredient that hydrates, dissolves, and controls texture in
-                        cooking and baking.</h5>
+                <div class="card">
+                    <img src="https://marcobeveragesystems.com/wp-content/uploads/2021/11/pexels-pixabay-416528-1.jpg"
+                        class="card-img-top" alt="Water">
+                    <div class="card-body">
+                        <h5 class="card-title">Water is a key ingredient that hydrates, dissolves, and controls texture
+                            in
+                            cooking and baking.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient14"> Water</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Raw_oxtail-01.jpg" class="card-img-top"
-                    alt="Oxtail">
-                <div class="card-body">
-                    <h5 class="card-title">A tender and flavorful meat cut from the tail of the cow, often used in
-                        stews.</h5>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Raw_oxtail-01.jpg"
+                        class="card-img-top" alt="Oxtail">
+                    <div class="card-body">
+                        <h5 class="card-title">A tender and flavorful meat cut from the tail of the cow, often used in
+                            stews.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient15"> Oxtail</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://www.delhiciousbody.com/cdn/shop/articles/AdobeStock_493529929.jpg?v=1711558042&width=1920"
-                    class="card-img-top" alt="Bay Leaves">
-                <div class="card-body">
-                    <h5 class="card-title">A fragrant leaf used in cooking to add depth and aroma to stews and sauces.
-                    </h5>
+                <div class="card">
+                    <img src="https://www.delhiciousbody.com/cdn/shop/articles/AdobeStock_493529929.jpg?v=1711558042&width=1920"
+                        class="card-img-top" alt="Bay Leaves">
+                    <div class="card-body">
+                        <h5 class="card-title">A fragrant leaf used in cooking to add depth and aroma to stews and
+                            sauces.
+                        </h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient16"> Bay Leaves</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://images.yummy.ph/yummy/uploads/2020/03/calamansi.jpg" class="card-img-top"
-                    alt="Calamansi">
-                <div class="card-body">
-                    <h5 class="card-title">A small citrus fruit that adds a tangy and refreshing flavor to marinades and
-                        sauces.</h5>
+                <div class="card">
+                    <img src="https://images.yummy.ph/yummy/uploads/2020/03/calamansi.jpg" class="card-img-top"
+                        alt="Calamansi">
+                    <div class="card-body">
+                        <h5 class="card-title">A small citrus fruit that adds a tangy and refreshing flavor to marinades
+                            and
+                            sauces.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient17"> Calamansi</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://www.seriouseats.com/thmb/It9RVeDU-1uFigh9mo7GKxT4UUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__02__20120228-194970-mexican-chorizo-346a0412590a4fb1aa4d02feba8d3747.jpg"
-                    class="card-img-top" alt="Chorizo">
-                <div class="card-body">
-                    <h5 class="card-title">A flavorful sausage made from pork and spices, often used in stews and soups.
-                    </h5>
+                <div class="card">
+                    <img src="https://www.seriouseats.com/thmb/It9RVeDU-1uFigh9mo7GKxT4UUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__02__20120228-194970-mexican-chorizo-346a0412590a4fb1aa4d02feba8d3747.jpg"
+                        class="card-img-top" alt="Chorizo">
+                    <div class="card-body">
+                        <h5 class="card-title">A flavorful sausage made from pork and spices, often used in stews and
+                            soups.
+                        </h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient18"> Chorizo</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://c02.purpledshub.com/uploads/sites/41/2018/08/GettyImages-516450576-9d05e67.jpg?w=940&webp=1"
-                    class="card-img-top" alt="Salt">
-                <div class="card-body">
-                    <h5 class="card-title">Salt is a vital ingredient that enhances flavor, preserves food, and helps
-                        balance seasonings in cooking.</h5>
+                <div class="card">
+                    <img src="https://c02.purpledshub.com/uploads/sites/41/2018/08/GettyImages-516450576-9d05e67.jpg?w=940&webp=1"
+                        class="card-img-top" alt="Salt">
+                    <div class="card-body">
+                        <h5 class="card-title">Salt is a vital ingredient that enhances flavor, preserves food, and
+                            helps
+                            balance seasonings in cooking.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient19"> Salt</label>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://www.thespicehouse.com/cdn/shop/articles/Black_Peppercorns_900x.jpg?v=1628111103"
-                    class="card-img-top" alt="Peppercorns">
-                <div class="card-body">
-                    <h5 class="card-title">Small, aromatic seeds that add heat and a pungent kick to a variety of
-                        dishes.</h5>
+                <div class="card">
+                    <img src="https://www.thespicehouse.com/cdn/shop/articles/Black_Peppercorns_900x.jpg?v=1628111103"
+                        class="card-img-top" alt="Peppercorns">
+                    <div class="card-body">
+                        <h5 class="card-title">Small, aromatic seeds that add heat and a pungent kick to a variety of
+                            dishes.</h5>
+                    </div>
                     <label><input type="checkbox" id="ingredient20"> Peppercorns</label>
                 </div>
             </div>
 
+
+            <div class="nextbutton-container">
+                <button id="next-button" onclick="changePage(1)" class="navigation-button right">Next</button>
+            </div>
         </section>
 
         <hr>
@@ -256,8 +270,12 @@
             <div class="recipe-title">
                 <h2>Recipes with Selected Ingredients</h2>
             </div>
+            <input type="text" id="recipe-search" placeholder="Search for a recipe..." />
             <div id="recipe-list"></div> <!-- Recipe list will be dynamically generated here -->
         </section>
+
+
+
 
         <!-- Modal (popup) for showing procedure -->
         <div id="procedure-modal" class="modal">
@@ -269,39 +287,53 @@
         </div>
 
 
-        <section class="about">
+        <section class="about" id="aboutsection">
             <div>
                 <h1>About</h1>
-                <p>About the Food Wars Recipe Guide
+                <p>
                     Welcome to the Food Wars Recipe Guide, where you can bring the magic of your favorite culinary
                     battles to life in your own kitchen! Inspired by the dynamic and delicious world of Food Wars!
                     Shokugeki no Soma, this interactive guide allows you to select ingredients from a wide array of
                     options and instantly discover unique and mouth-watering recipes.
-
+                </p>
+                <p>
                     Whether you’re a seasoned chef or a home cook, our guide helps you create dishes inspired by the
                     intense and flavorful creations from the anime. Simply choose the ingredients you have on hand, and
                     the guide will generate a recipe that matches your selection. Explore new combinations, try out
                     intricate techniques, or replicate signature dishes that have dazzled the judges of Totsuki Culinary
                     Academy.
-
-                    Features:
-                    Dynamic Ingredient Selection: Choose from a range of ingredients (vegetables, meats, spices, and
+                </p>
+                <p>
+                    <strong>Features:</strong>
+                </p>
+                <p>
+                    <i>Dynamic Ingredient Selection:</i> Choose from a range of ingredients (vegetables, meats, spices, and
                     more!) and let the guide show you what amazing dishes you can create.
-                    Anime-Inspired Recipes: Recreate iconic dishes from Food Wars, including daring creations seen in
+                </p>
+                <p>
+                    <i>Anime-Inspired Recipes:</i> Recreate iconic dishes from Food Wars, including daring creations seen in
                     the anime, or come up with your own culinary masterpieces.
-                    Step-by-Step Instructions: Every recipe comes with clear, easy-to-follow steps to help you prepare,
+                </p>
+                <p>
+                    <i>Step-by-Step Instructions:</i> Every recipe comes with clear, easy-to-follow steps to help you prepare,
                     cook, and present like a pro.
-                    Flavor Pairing Tips: Discover new flavor combinations and tips inspired by the creativity and
+                </p>
+                <p>
+                    <i>Flavor Pairing Tips:</i> Discover new flavor combinations and tips inspired by the creativity and
                     techniques of the show's chefs.
+                </p>
+                <p>
                     Ready to make your culinary skills sizzle like Soma Yukihira in the kitchen? Select your
-                    ingredients, and let the Food Wars Recipe Guide guide you to a delicious victory!</p>
+                    ingredients, and let the Food Wars Recipe Guide guide you to a delicious victory!
+                </p>
             </div>
         </section>
+
 
     </main>
 
     <footer>
-        <div class="footer-container">
+        <div class="footer-container" id="footer">
             <!-- Logo or Site Name -->
             <div class="footer-logo">
                 <img src="images/logo.png" alt="">
@@ -311,12 +343,10 @@
 
             <!-- Footer Links -->
             <div class="footer-links">
-                <h3>Quick Links</h3>
+                <h3>Contact Us</h3>
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="#">0935-423-9092</a></li>
+                    <li><a href="#">foodWars@gmail.com</a></li>
                 </ul>
             </div>
 
@@ -332,7 +362,7 @@
 
         <!-- Footer Bottom (Copyright) -->
         <div class="footer-bottom">
-            <p>&copy; 2024 Recipe Guide. All rights reserved.</p>
+            <p>&copy; 2024 Food Wards. All rights reserved.</p>
         </div>
     </footer>
 

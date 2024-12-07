@@ -3,7 +3,6 @@
 
 * {
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 body {
@@ -13,16 +12,30 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 60px; 
 }
 
-/* Header Section */
+/* Main content container adjustments */
+main {
+    margin: 0 120px;
+    padding-top: 60px; /* Same height as the header */
+}
+
+/* Header Section - existing styles */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     background-image: linear-gradient(240deg, #253A4A 60%, #E0A840 100%);
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    width: 100%;
+    z-index: 100; /* Ensure the header stays on top */
 }
 
+/* Adjust the layout for fixed header */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -32,87 +45,82 @@ header {
 
 .picTitle {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-
 .picTitle img {
-    height: 50px;
+    width: 50px;
+    height: auto;
 }
 
 .picTitle h1 {
-    color: #fff;
+    color: white;
+    font-size: 24px;
     margin-left: 10px;
 }
 
-nav {
+.nav-links {
     display: flex;
+    gap: 20px;
 }
 
-nav a {
-    color: #fff;
+.nav-links a {
+    color: white;
     text-decoration: none;
-    margin: 0 15px;
-    padding: 10px;
+    font-size: 18px;
 }
 
-nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
-}
-
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
+    gap: 5px;
     cursor: pointer;
-    width: 30px;
-    height: 20px;
-    justify-content: space-between;
 }
 
 .hamburger span {
-    background-color: #fff;
+    width: 30px;
     height: 3px;
-    width: 100%;
+    background-color: white;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-        flex-direction: row;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        padding: 10px 0;
-        z-index: 1;
+/* Mobile adjustments */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    nav a {
-        padding: 15px;
-        text-align: center;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
         width: 100%;
-        border-top: 1px solid #555;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: left;
     }
 
     .hamburger {
         display: flex;
     }
 
-    .hamburger.open + .nav-links {
+    /* Show the nav-links when hamburger is clicked */
+    .nav-links.active {
         display: flex;
     }
 }
 
-/* When Hamburger menu is open */
-.hamburger.open {
-    transform: rotate(90deg);
+/* Additional styles for when nav is expanded */
+@media screen and (max-width: 768px) {
+    .nav-links.active {
+        display: flex;
+    }
 }
 
-main {
-    margin: 0 120px;
-}
 
 /* Home Section */
 .home {
@@ -157,51 +165,9 @@ main {
     border-radius: 40px;
 }
 
-.ingredient-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
 
-.ingredient-section h2 {
-    font-size: 30px;
-    text-align: center;
-}
 
-/* General form styling */
-form.d-flex {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    padding: 15px;
-}
 
-form.d-flex .form-control {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    max-width: 300px;
-    margin-right: 10px;
-}
-
-form.d-flex .btn {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form.d-flex .btn:hover {
-    background-color: #0056b3;
-}
 
 /* Cards Styling */
 /* Cards Styling */
@@ -211,10 +177,21 @@ form.d-flex .btn:hover {
     gap: 30px;
     flex-wrap: wrap;
     padding: 50px;
+ 
+}
+
+
+.cardsHere {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 50px;
 }
 
 .card {
     width: 16rem;
+    height: 19rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -223,10 +200,11 @@ form.d-flex .btn:hover {
     /* Slightly larger shadow for depth */
     border-radius: 15px;
     /* Rounded corners for a modern feel */
-    background-color: #fff;
+    background-color: #ffffff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     margin-bottom: 20px;
     overflow: hidden;
+    color: white;
     /* Prevents overflow for a clean look */
 }
 
@@ -254,9 +232,9 @@ form.d-flex .btn:hover {
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding: 15px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    height: 40%;
     /* Light background for text */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -373,14 +351,63 @@ input[type="checkbox"]:checked:hover {
     border-color: #E0A840;
 }
 
+
+
+.backbutton-container {
+    align-content: center;
+}
+
+.nextbutton-container {
+    align-content: center;
+}
+
+.navigation-button {
+    background-color: #E0A840;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Adjusted padding for better button shape */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for background color, scale, and shadow */
+    border-radius: 5px; /* Optional: To make the corners rounded */
+}
+
+.left {
+    left: 0;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+.right {
+    right: 0;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+.navigation-button:hover {
+    background-color:  #253A4A; /* Darker blue when hovered */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect when hovered */
+}
+
+.navigation-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+
 /* Style for the recipe results section */
 
 .recipe-title {
-    background-color: #45a049;
+    background-color: #E0A840;
     border-radius: 10px;
     margin-bottom: 10px;
     justify-items: center;
+    box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.219);
+    padding: 8px;
 }
+
 
 .recipe-results {
     background-color: #f9f9f9;
@@ -389,6 +416,17 @@ input[type="checkbox"]:checked:hover {
     max-width: 1200px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#recipe-search {
+    width: 50%;           /* Adjust the width of the search bar */
+    padding: 10px;        /* Adds padding inside the input field */
+    font-size: 16px;      /* Adjust font size */
+    margin-top: 10px;     /* Adds space between title and search bar */
+    margin-bottom: 20px;  /* Adds space between search bar and recipe list */
+    border-radius: 5px;   /* Optional: Adds rounded corners to the input */
+    border: 1px solid #ccc; /* Optional: Adds a border to the input */
 }
 
 /* Heading style */
@@ -451,7 +489,6 @@ input[type="checkbox"]:checked:hover {
 .show-procedure-btn {
     background-color: #4CAF50;
     color: white;
-    border: none;
     padding: 10px 20px;
     font-size: 14px;
     cursor: pointer;
@@ -463,20 +500,23 @@ input[type="checkbox"]:checked:hover {
 }
 
 .show-procedure-btn:hover {
-    background-color: #45a049;
+    background-color: #E0A840;
 }
 
 /* Modal (popup) styles */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: fixed;
-    z-index: 1; /* Sit on top */
+    z-index: 1;
+    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with opacity */
     justify-content: center;
     align-items: center;
     padding: 10px;
