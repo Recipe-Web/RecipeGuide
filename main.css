@@ -12,16 +12,18 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-top: 60px; 
+    padding-top: 60px;
+    animation: slideInFade 1.5s ease-out forwards;
 }
 
-/* Main content container adjustments */
+
+
+
 main {
     margin: 0 120px;
-    padding-top: 60px; /* Same height as the header */
+    padding-top: 60px;
 }
 
-/* Header Section - existing styles */
 header {
     position: fixed;
     top: 0;
@@ -32,10 +34,9 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 10px;
     width: 100%;
-    z-index: 100; /* Ensure the header stays on top */
+    z-index: 100;
 }
 
-/* Adjust the layout for fixed header */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -48,6 +49,7 @@ header {
     flex-direction: row;
     align-items: center;
 }
+
 .picTitle img {
     width: 50px;
     height: auto;
@@ -125,44 +127,134 @@ header {
 /* Home Section */
 .home {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.home h1 {
-    font-size: 3rem;
     text-align: center;
+    justify-content: space-around;
+    padding: 60px 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transform: scale(0.95);
+    animation: scaleUp 0.8s ease-in-out forwards;
 }
 
-.home p {
-    margin-left: 50px;
-    margin-right: 50px;
+.home-about h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #E0A840;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.home-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    max-width: 700px;
+    margin: 20px auto;
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
 }
 
 .images {
+    margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 30px;
+    gap: 30px;
+    opacity: 0;
+    flex-wrap: wrap;
+    animation: fadeInImages 2.5s 0.5s forwards;
 }
 
-.images img {
-    border-radius: 0px 90px;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
+.image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
 .tagline-container {
-    font-style: italic;
-    text-align: center;
-    padding: 30px;
+    margin-top: 50px;
     background-color: #253A4A;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInTagline 3s 1s forwards;
+}
+
+.tagline {
+    font-size: 1.8rem;
+    font-weight: 500;
     color: white;
-    border-radius: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: pulse 1.5s infinite alternate;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInImages {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTagline {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
 }
 
 
@@ -177,7 +269,7 @@ header {
     gap: 30px;
     flex-wrap: wrap;
     padding: 50px;
- 
+
 }
 
 
@@ -365,11 +457,14 @@ input[type="checkbox"]:checked:hover {
     background-color: #E0A840;
     color: white;
     border: none;
-    padding: 15px 30px; /* Adjusted padding for better button shape */
+    padding: 15px 30px;
+    /* Adjusted padding for better button shape */
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transition for background color, scale, and shadow */
-    border-radius: 5px; /* Optional: To make the corners rounded */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    /* Smooth transition for background color, scale, and shadow */
+    border-radius: 5px;
+    /* Optional: To make the corners rounded */
 }
 
 .left {
@@ -385,9 +480,12 @@ input[type="checkbox"]:checked:hover {
 }
 
 .navigation-button:hover {
-    background-color:  #253A4A; /* Darker blue when hovered */
-    transform: scale(1.1); /* Slightly enlarge the button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow effect when hovered */
+    background-color: #253A4A;
+    /* Darker blue when hovered */
+    transform: scale(1.1);
+    /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add a shadow effect when hovered */
 }
 
 .navigation-button:disabled {
@@ -398,92 +496,160 @@ input[type="checkbox"]:checked:hover {
 
 
 /* Style for the recipe results section */
-
+/* Recipe Title Styling */
 .recipe-title {
     background-color: #E0A840;
     border-radius: 10px;
     margin-bottom: 10px;
     justify-items: center;
     box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.219);
-    padding: 8px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.recipe-title:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+}
 
+/* Recipe Results Section Styling */
 .recipe-results {
     background-color: #f9f9f9;
     padding: 20px;
     margin: 20px auto;
     max-width: 1200px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 #recipe-search {
-    width: 50%;           /* Adjust the width of the search bar */
-    padding: 10px;        /* Adds padding inside the input field */
-    font-size: 16px;      /* Adjust font size */
-    margin-top: 10px;     /* Adds space between title and search bar */
-    margin-bottom: 20px;  /* Adds space between search bar and recipe list */
-    border-radius: 5px;   /* Optional: Adds rounded corners to the input */
-    border: 1px solid #ccc; /* Optional: Adds a border to the input */
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
 }
 
-/* Heading style */
-.recipe-results h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
+#recipe-search:focus {
+    border-color: #E0A840;
+    outline: none;
 }
 
-/* Style for the list of recipes */
+/* Recipe List Grid Layout */
 #recipe-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    animation: fadeIn 1s ease-out forwards;
 }
 
-/* Style for individual recipe cards */
+/* Recipe Card Styling */
 .recipe-card {
     background-color: #fff;
-    border-radius: 60px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .recipe-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for recipe image */
+/* Recipe Image Styling */
 .recipe-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Style for card content (title, ingredients, and procedure) */
+.recipe-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Recipe Card Content (Title, Ingredients, Procedure) */
 .recipe-card-content {
     padding: 15px;
-    align-items: center;
-}
-
-/* Recipe name/title */
-.recipe-card h3 {
-    font-size: 18px;
-    color: #555;
     text-align: center;
 }
 
-/* Recipe details (ingredients and procedure) */
+.recipe-card h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.recipe-card:hover h3 {
+    color: #E0A840; /* Highlight color for title on hover */
+}
+
+/* Recipe Details (Ingredients & Procedure) */
 .recipe-card p {
     font-size: 14px;
     color: #777;
     line-height: 1.5;
+    transition: color 0.3s ease;
 }
+
+.recipe-card:hover p {
+    color: #333;
+}
+
+/* Button Styling */
+.show-procedure-btn {
+    width: 60%;
+    padding: 12px;
+    background-color: #E0A840;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.show-procedure-btn:hover {
+    background-color: #d88c34;
+    transform: translateY(-5px);
+}
+
+/* Animations for Fade-in and Up */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Style for the Show Procedure button */
 .show-procedure-btn {
@@ -627,7 +793,7 @@ footer {
     transition: color 0.3s ease;
 }
 
-.footer-links ul li a:hover {
+.footer-links ul li:hover {
     color: #ffcc00;
 }
 
