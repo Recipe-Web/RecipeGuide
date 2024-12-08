@@ -72,6 +72,12 @@ header {
     font-size: 18px;
 }
 
+.nav-links a:hover {
+    color: #E0A840;
+    text-decoration: none;
+    font-size: 18px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -182,6 +188,7 @@ header {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
 
+
 .tagline-container {
     margin-top: 50px;
     background-color: #253A4A;
@@ -263,22 +270,23 @@ header {
 
 /* Cards Styling */
 /* Cards Styling */
+/* Default Styles (unchanged) */
 .cards-checkboxes {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     gap: 30px;
-    flex-wrap: wrap;
-    padding: 50px;
-
 }
 
+.buttonsAndCards {
+    display: flex;
+}
 
 .cardsHere {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 10px;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 50px 5px;
 }
 
 .card {
@@ -289,22 +297,17 @@ header {
     justify-content: space-between;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    /* Slightly larger shadow for depth */
     border-radius: 15px;
-    /* Rounded corners for a modern feel */
     background-color: #ffffff;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
     margin-bottom: 20px;
     overflow: hidden;
     color: white;
-    /* Prevents overflow for a clean look */
 }
 
 .card:hover {
     transform: scale(1.05);
-    /* Slight zoom effect on hover */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    /* Increased shadow on hover for more emphasis */
 }
 
 .card img {
@@ -318,7 +321,6 @@ header {
 
 .card img:hover {
     transform: scale(1.1);
-    /* Slight zoom effect on image hover */
 }
 
 .card-body {
@@ -327,7 +329,6 @@ header {
     padding: 15px;
     background-color: #ffffff;
     height: 40%;
-    /* Light background for text */
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
@@ -349,25 +350,20 @@ header {
     font-weight: 500;
     position: relative;
     padding-left: 30px;
-    /* Space for the checkbox */
     transition: color 0.3s ease;
 }
 
 .card label:hover {
     color: #E0A840;
-    /* Highlight color on hover */
 }
 
-/* Basic Checkbox Styling */
 input[type="checkbox"] {
     appearance: none;
-    /* Remove default appearance */
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 22px;
     height: 22px;
     border: 1px solid #333;
-    /* Green border */
     border-radius: 4px;
     background-color: #fff;
     transition: background-color 0.3s, border 0.3s, transform 0.3s ease;
@@ -376,23 +372,18 @@ input[type="checkbox"] {
     position: relative;
 }
 
-/* Animation for the checkmark (using pseudo-element) */
 input[type="checkbox"]:checked {
     background-color: #45a049;
-    /* Green when checked */
     border-color: #45a049;
     animation: checkmark-animation 0.3s ease-in-out forwards;
 }
 
 input[type="checkbox"]:checked+label {
     color: #4CAF50;
-    /* Change label color when checked */
 }
 
-/* Add the checkmark using a pseudo-element */
 input[type="checkbox"]:checked::before {
     content: '✔';
-    /* Checkmark symbol */
     position: absolute;
     top: 2px;
     left: 5px;
@@ -402,15 +393,12 @@ input[type="checkbox"]:checked::before {
     animation: checkmark-scale 0.3s ease-in-out forwards;
 }
 
-/* Keyframe animation for checkmark */
 @keyframes checkmark-animation {
     0% {
         transform: scale(1);
     }
-
     100% {
         transform: scale(1.1);
-        /* Slight scaling effect when checked */
     }
 }
 
@@ -418,32 +406,25 @@ input[type="checkbox"]:checked::before {
     0% {
         transform: scale(0);
     }
-
     100% {
         transform: scale(2);
     }
 }
 
-/* Disabled Checkbox */
 input[type="checkbox"]:disabled {
     background-color: #f0f0f0;
-    /* Light gray for disabled */
     border-color: #bbb;
     cursor: not-allowed;
 }
 
 input[type="checkbox"]:hover {
     border-color: #E0A840;
-    /* Slight hover effect for border */
 }
 
 input[type="checkbox"]:checked:hover {
     background-color: #E0A840;
-    /* Hover effect when checked */
     border-color: #E0A840;
 }
-
-
 
 .backbutton-container {
     align-content: center;
@@ -458,13 +439,10 @@ input[type="checkbox"]:checked:hover {
     color: white;
     border: none;
     padding: 15px 30px;
-    /* Adjusted padding for better button shape */
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    /* Smooth transition for background color, scale, and shadow */
     border-radius: 5px;
-    /* Optional: To make the corners rounded */
 }
 
 .left {
@@ -481,17 +459,149 @@ input[type="checkbox"]:checked:hover {
 
 .navigation-button:hover {
     background-color: #253A4A;
-    /* Darker blue when hovered */
     transform: scale(1.1);
-    /* Slightly enlarge the button */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add a shadow effect when hovered */
 }
 
 .navigation-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+#selected-ingredients-container {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    justify-items: center;
+    padding: 15px;
+    margin: 20px;
+    width: 15%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 15%;
+}
+
+#selected-ingredients-container p {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+#selected-ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #4CAF50;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#clear-selection {
+    background-color: #FF5733;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+#clear-selection:hover {
+    background-color: #FF3311;
+}
+
+#clear-selection:focus {
+    outline: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .cards-checkboxes {
+        gap: 20px;
+    }
+
+    .cardsHere {
+        padding: 30px 10px;
+    }
+
+    .card {
+        width: 14rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .cards-checkboxes {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cardsHere {
+        padding: 20px 5px;
+    }
+
+    .card {
+        width: 13rem;
+        height: auto;
+    }
+
+    #selected-ingredients-container {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-checkboxes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cardsHere {
+        padding: 20px 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #selected-ingredients-container {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .navigation-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-checkboxes {
+        gap: 10px;
+    }
+
+    .cardsHere {
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    #selected-ingredients-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .navigation-button {
+        padding: 12px;
+        font-size: 12px;
+    }
+}
+
+
 
 
 

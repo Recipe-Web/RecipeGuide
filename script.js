@@ -1,4 +1,4 @@
-document.getElementById("hamburger").addEventListener("click", function() {
+document.getElementById("hamburger").addEventListener("click", function() { 
     const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle("active");
 });
@@ -21,6 +21,32 @@ function getSelectedIngredients() {
     return selectedIngredients;
 }
 
+// Function to update the selected ingredients display
+function updateSelectedIngredients() {
+    const selectedIngredients = getSelectedIngredients();
+    const selectedIngredientsContainer = document.getElementById('selected-ingredients');
+    
+    // Clear previous ingredients
+    selectedIngredientsContainer.innerHTML = ''; 
+    
+    if (selectedIngredients.length > 0) {
+        // Create an <ol> element for an ordered list
+        const ol = document.createElement('ol');
+        selectedIngredients.forEach(ingredient => {
+            // For each selected ingredient, create an <li> element
+            const li = document.createElement('li');
+            li.textContent = ingredient;
+            ol.appendChild(li);
+        });
+        
+        // Append the <ol> to the container
+        selectedIngredientsContainer.appendChild(ol);
+    } else {
+        selectedIngredientsContainer.textContent = 'No ingredients selected.';
+    }
+}
+
+
 // Filter recipes based on selected ingredients and search query
 async function filterRecipes() {
     const selectedIngredients = getSelectedIngredients();
@@ -35,6 +61,7 @@ async function filterRecipes() {
     });
 
     displayRecipes(filteredRecipes);
+    updateSelectedIngredients(); // Update the selected ingredients display
 }
 
 // Display filtered recipes
@@ -50,7 +77,7 @@ function displayRecipes(filteredRecipes) {
             recipeDiv.classList.add('recipe-card');
             recipeDiv.innerHTML = `
                 <img src="${recipe.image}" alt="${recipe.name}" />
-                <div class="recipe-card-content"; style="height:35%">
+                <div class="recipe-card-content" style="height:35%">
                     <h3 style="height: 35%">${recipe.name}</h3>
                     <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
                 </div>
@@ -99,16 +126,24 @@ window.addEventListener('click', function(event) {
 window.addEventListener('DOMContentLoaded', async () => {
     const recipes = await loadRecipes();
     displayRecipes(recipes);
+    updateSelectedIngredients(); // Initialize the selected ingredients display
 });
 
 // Add event listeners for ingredient selection and search input
 document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-    checkbox.addEventListener('change', filterRecipes);
+    checkbox.addEventListener('change', filterRecipes); // Re-filter recipes when ingredients are selected or deselected
 });
 
 document.getElementById('recipe-search').addEventListener('input', filterRecipes);
 
+// Function to handle the "Clear All" button
+document.getElementById('clear-selection').addEventListener('click', function() {
+    // Uncheck all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
 
+    // Re-run the filtering function to update the displayed recipes and ingredients list
+    filterRecipes();
+});
 
 
 
@@ -153,7 +188,7 @@ function changePage(direction) {
     } else if (currentPage > totalPages) {
         currentPage = totalPages;
     }
-
+    
     showCardsForPage();
 }
 
